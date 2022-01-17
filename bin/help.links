@@ -2,6 +2,7 @@
 
 # This asdf shell script provides useful URLS for TeXLive
 
+echo ""
 echo Wikipedia https://en.wikipedia.org/wiki/TeX_Live
 echo ""
 echo TeX-Live https://tug.org/texlive/

@@ -1,5 +1,7 @@
 # texlive.profile written on Mon Jan 17 12:00:17 2022 UTC
+#
 selected_scheme scheme-custom
+#
 TEXDIR ==INSTALL-DIR==
 TEXMFCONFIG $TEXMFSYSCONFIG
 TEXMFHOME $TEXMFLOCAL
@@ -7,6 +9,10 @@ TEXMFLOCAL ==INSTALL-DIR==/texmf-local
 TEXMFSYSCONFIG ==INSTALL-DIR==/texmf-config
 TEXMFSYSVAR ==INSTALL-DIR==/texmf-var
 TEXMFVAR $TEXMFSYSVAR
+#
+# To install a collection, make sure the value is '1'
+# To not install a colleciton, make sure the value is '0'
+#
 collection-basic 1
 collection-bibtexextra 1
 collection-binextra 1
@@ -46,11 +52,15 @@ collection-pstricks 1
 collection-publishers 1
 collection-texworks 1
 collection-xetex 1
+#
+#
 instopt_adjustpath 1
 instopt_adjustrepo 1
 instopt_letter 0
 instopt_portable 1
 instopt_write18_restricted 1
+#
+#
 tlpdbopt_autobackup 1
 tlpdbopt_backupdir tlpkg/backups
 tlpdbopt_create_formats 1
