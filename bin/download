@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# This asdf shell script downloads the correct version of TeXLive
+
+trap 'rm -rf "$ASDF_TEXLIVE_TMPDIR"' EXIT
+
+ASDF_TEXLIVE_TMPDIR=$(mktemp -d /tmp/asdf-texlive-XXXXXX)
+ASDF_DOWNLOAD_PATH=${ASDF_DOWNLOAD_PATH-$ASDF_TEXLIVE_TMPDIR}
+
+cd $ASDF_DOWNLOAD_PATH
+
+wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+
+if test $? -ne 0
+then
+  rm install-tl-unx.tar.gz
+  exit 1
+else
+  tar zxvf install-tl-unx.tar.gz --strip-components=1
+  rm install-tl-unx.tar.gz
+fi
+
+tree .

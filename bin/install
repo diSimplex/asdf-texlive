@@ -1,0 +1,40 @@
+#!/bin/sh
+
+# This asdf shell script installs TeXLive
+
+# consider using the trap command
+# see: https://www.shellscript.sh/trap.html
+
+cd $ASDF_DOWNLOAD_PATH
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+sed 's|==INSTALL-DIR==|/silly|' $SCRIPT_DIR/texlive.profile > texlive.profile
+
+./install-tl --profile texlive.profile
+
+TEXLIVE_BIN_DIR=$(find $ASDF_INSTALL_PATH -iname bin)
+
+mkdir -p bin
+
+for cmd in `ls $TEXLIVE_BIN_DIR` ; do
+  case $cmd in
+    *.lua)
+      ;;
+    *)
+    cat <<END_TEMPLATE > bin/$cmd
+#!/usr/bin/env bash
+# asdf-context-plugin: $cmd
+exec $TEXLIVE_BIN_DIR/$cmd \$@
+END_TEMPLATE
+
+    chmod a+x bin/$cmd
+  esac
+done
+
+echo "------------------------------------------------------------------"
+echo "asdf-texlive:"
+echo ""
+echo "The asdf system now manages the texlive commands."
+echo ""
+echo "The texlive commands should now simply work..."
+echo ""

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# This asdf shell script provides useful URLS for TeXLive
+
+echo Wikipedia https://en.wikipedia.org/wiki/TeX_Live
+echo ""
+echo TeX-Live https://tug.org/texlive/
+echo ""
+echo First-Document https://latex-tutorial.com/tutorials/first-document/
+echo ""
+echo Documentation https://tug.org/texlive/doc.html

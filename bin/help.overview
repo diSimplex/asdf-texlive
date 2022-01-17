@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# This asdf shell script provides a brief overview of TeXLive
+
+echo "This asdf installation of TeXLive provides a 'standard' 'portable'"
+echo "installation of TeXLive in your personal (asdf) workspace."
+echo ""
+echo "(From Wikipedia)"
+echo ""
+echo "TeX Live is a cross-platform, free software distribution for the TeX"
+echo "typesetting system that includes major TeX-related programs, macro"
+echo "packages, and fonts. It is the replacement of its no-longer supported"
+echo "counterpart teTeX. It is now the default TeX distribution for several"
+echo "Linux distributions such as openSUSE, Fedora, Debian, Ubuntu, Termux and"
+echo "Gentoo. Other Unix operating systems like OpenBSD, FreeBSD and NetBSD have"
+echo "also converted from teTeX to TeX Live.""
+echo ""
