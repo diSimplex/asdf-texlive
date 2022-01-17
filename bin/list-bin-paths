@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# This asdf shell script lists the TeXLive binary directories
+
+cd $ASDF_INSTALL_PATH
+
+
+TEXLIVE_PLATFORM=$(ls -1 bin)
+
+echo bin/$TEXLIVE_PLATFORM
