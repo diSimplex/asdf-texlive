@@ -5,12 +5,12 @@
 #selected_scheme scheme-medium # (~ 1000 MB)
 selected_scheme scheme-custom
 #
-TEXDIR /root/TeXLive
+TEXDIR ==INSTALL-DIR==
 TEXMFCONFIG $TEXMFSYSCONFIG
 TEXMFHOME $TEXMFLOCAL
-TEXMFLOCAL /root/TeXLive/texmf-local
-TEXMFSYSCONFIG /root/TeXLive/texmf-config
-TEXMFSYSVAR /root/TeXLive/texmf-var
+TEXMFLOCAL ==INSTALL-DIR==/texmf-local
+TEXMFSYSCONFIG ==INSTALL-DIR==/texmf-config
+TEXMFSYSVAR ==INSTALL-DIR==/texmf-var
 TEXMFVAR $TEXMFSYSVAR
 #
 # Builds to about 1150 MB
