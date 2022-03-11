@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # This asdf shell script installs TeXLive
 
@@ -11,7 +11,13 @@ echo "ASDF  INSTALL: $ASDF_INSTALL_PATH"
 cd $ASDF_DOWNLOAD_PATH
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+echo "SCRIPT    DIR: $SCRIPT_DIR"
+
 sed "s|==INSTALL-DIR==|$ASDF_INSTALL_PATH|" $SCRIPT_DIR/texlive.profile > texlive.profile
+
+echo "------------------------------------------------------------------"
+cat texlive.profile
+echo "------------------------------------------------------------------"
 
 ./install-tl --profile texlive.profile
 
