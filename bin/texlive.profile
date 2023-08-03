@@ -16,12 +16,14 @@ TEXMFVAR $TEXMFSYSVAR
 # Builds to about 1150 MB
 #
 collection-basic 1
+collection-context 1
 collection-langcyrillic 1
 collection-langgerman 1
 collection-langgreek 1
 collection-latex 1
 collection-latexrecommended 1
 collection-mathscience 1
+collection-metapost 1
 collection-publishers 1
 #
 instopt_adjustpath 0
